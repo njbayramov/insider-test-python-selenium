@@ -21,7 +21,7 @@ curl -LO "https://dl.k8s.io/release/$(curl -Ls https://dl.k8s.io/release/stable.
 chmod +x kubectl
 sudo mv kubectl /usr/local/bin/
 kubectl version --client
-
+```
 
 ### Step 2: Install AWS CLI
 
@@ -31,3 +31,4 @@ curl -s "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.
 unzip awscliv2.zip
 sudo ./aws/install
 aws --version
+```
