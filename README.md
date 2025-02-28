@@ -127,4 +127,10 @@ aws ecr get-login-password --region us-west-1 | docker login --username AWS --pa
 ```
 Replace XXXXXXXXX with your AWS account ID.
 
+## Deploy Kubernetes Infrastructure and Run Python Tests
 
+To deploy the **EKS cluster** and run the **Selenium Python tests**, navigate to the project’s root directory and execute the following command:
+
+```bash
+sudo python3 scripts/deploy_and_test.py
+```
