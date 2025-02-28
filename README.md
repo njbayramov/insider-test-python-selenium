@@ -145,6 +145,58 @@ aws ecr get-login-password --region us-west-1 | docker login --username AWS --pa
 ```
 Replace XXXXXXXXX with your AWS account ID.
 
+## Build Docker Images
+
+Chrome Node
+```bash
+docker build -t insider-chrome-node -f Dockerfile.chrome-node .
+```
+
+Selenium Hub
+```bash
+docker build -t insider-selenium-hub -f Dockerfile.selenium-hub .
+```
+
+Test Controller
+```bash
+docker build -t insider-test-controller -f Dockerfile.test-controller .
+```
+
+### Tag Docker Images for ECR
+
+Chrome Node
+```bash
+docker tag insider-chrome-node:latest XXXXXXXXX.dkr.ecr.us-west-1.amazonaws.com/insider-chrome-node:latest
+```
+
+Selenium Hub
+```bash
+docker tag insider-selenium-hub:latest XXXXXXXXX.dkr.ecr.us-west-1.amazonaws.com/insider-selenium-hub:latest
+```
+
+Test Controller
+```bash
+docker tag insider-test-controller:latest XXXXXXXXX.dkr.ecr.us-west-1.amazonaws.com/insider-test-controller:latest
+```
+
+### Push Docker Images to ECR
+
+Chrome Node
+```bash
+docker push XXXXXXXXX.dkr.ecr.us-west-1.amazonaws.com/insider-chrome-node:latest
+```
+
+Selenium Hub
+```bash
+docker push XXXXXXXXX.dkr.ecr.us-west-1.amazonaws.com/insider-selenium-hub:latest
+```
+
+Test Controller
+```bash
+docker push XXXXXXXXX.dkr.ecr.us-west-1.amazonaws.com/insider-test-controller:latest
+```
+After pushing the images, update the Kubernetes deployment files to use these ECR images.
+
 ## Deploy Kubernetes Infrastructure and Run Python Tests
 
 To deploy the **EKS cluster** and run the **Selenium Python tests**, navigate to the project’s root directory and execute the following command:
