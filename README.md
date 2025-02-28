@@ -132,7 +132,18 @@ Replace XXXXXXXXX with your AWS account ID.
 To deploy the **EKS cluster** and run the **Selenium Python tests**, navigate to the project’s root directory and execute the following command:
 
 ```bash
-sudo python3 scripts/deploy_and_test.py
+sudo python3 scripts/deploy_and_test.py --node_count <value>
+```
+Where:
+--node_count specifies the number of nodes to deploy in the EKS cluster.
+Default value: 1
+Minimum value: 1
+Maximum value: 5
+
+For example, to deploy a cluster with 3 nodes, use:
+
+```bash
+sudo python3 scripts/deploy_and_test.py --node_count 3
 ```
 
 ## Output
@@ -179,7 +190,6 @@ Once the tests are executed, you can check the **deployment results**. This sect
 
 ![Deployment and Test Results](./screenshots/deployments_and_test_results_1.png)
 ![Deployment and Test Results](./screenshots/deployments_and_test_results_2.png)
-![Deployment and Test Results](./screenshots/deployments_and_test_results_3.png)
 
 ### Test Results
 
