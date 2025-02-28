@@ -177,9 +177,9 @@ Once the tests are executed, you can check the **deployment results**. This sect
 
 **Example Output:**
 
-![Deployment and Test Results](./screenshots/deployment_test_results_1.png)
-![Deployment and Test Results](./screenshots/deployment_test_results_2.png)
-![Deployment and Test Results](./screenshots/deployment_test_results_3.png)
+![Deployment and Test Results](./screenshots/deployments_and_test_results_1.png)
+![Deployment and Test Results](./screenshots/deployments_and_test_results_2.png)
+![Deployment and Test Results](./screenshots/deployments_and_test_results_3.png)
 
 ### Test Results
 
@@ -187,8 +187,8 @@ Once the deployments are executed, you can check the **Test results**. This sect
 
 **Example Output:**
 
-![Deployment and Test Results](./screenshots/deployment_test_results_4.png)
-![Deployment and Test Results](./screenshots/deployment_test_results_5.png)
-![Deployment and Test Results](./screenshots/deployment_test_results_6.png)
+![Deployment and Test Results](./screenshots/deployments_and_test_results_4.png)
+![Deployment and Test Results](./screenshots/deployments_and_test_results_5.png)
+![Deployment and Test Results](./screenshots/deployments_and_test_results_6.png)
 
 
