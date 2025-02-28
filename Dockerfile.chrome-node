@@ -1,0 +1,10 @@
+FROM selenium/node-chrome:latest
+
+# Set environment variables for the Selenium Grid event bus
+ENV SE_EVENT_BUS_HOST=selenium-hub
+ENV SE_EVENT_BUS_PUBLISH_PORT=4442
+ENV SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+
+# Expose required ports
+EXPOSE 5555
+

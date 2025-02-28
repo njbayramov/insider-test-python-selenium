@@ -1,0 +1,5 @@
+# Use the official Selenium Grid Hub image
+FROM selenium/hub:latest
+
+# Expose the required ports
+EXPOSE 4442 4443 4444

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: selenium-test-controller
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: selenium-test-controller
+  template:
+    metadata:
+      labels:
+        app: selenium-test-controller
+    spec:
+      containers:
+      - name: test-controller
+        image: 145697238045.dkr.ecr.us-west-1.amazonaws.com/insider-test-python:test-controller
+        imagePullPolicy: Always
+        env:
+        - name: SELENIUM_REMOTE_URL
+          value: "http://selenium-hub:4444/wd/hub"

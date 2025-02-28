@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chrome-node
+spec:
+  replicas: 1  # This will be dynamically scaled
+  selector:
+    matchLabels:
+      app: chrome-node
+  template:
+    metadata:
+      labels:
+        app: chrome-node
+    spec:
+      containers:
+      - name: chrome
+        image: 145697238045.dkr.ecr.us-west-1.amazonaws.com/insider-test-python:chrome-node
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5555
+        env:
+          - name: SE_EVENT_BUS_HOST
+            value: "selenium-hub"
+          - name: SE_EVENT_BUS_SUBSCRIBE_PORT
+            value: "4443"
+          - name: SE_EVENT_BUS_PUBLISH_PORT
+            value: "4442"
