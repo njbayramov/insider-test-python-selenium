@@ -134,3 +134,40 @@ To deploy the **EKS cluster** and run the **Selenium Python tests**, navigate to
 ```bash
 sudo python3 scripts/deploy_and_test.py
 ```
+
+## Output
+
+After successfully deploying the Kubernetes infrastructure and running the Selenium Python tests, you will see the following outputs. Each section includes relevant screenshots for reference.
+
+### Kubernetes Services
+
+Once the EKS cluster is deployed, you can view the running **Kubernetes services**. The services section will show information about the services running on your cluster.
+
+**Example Output:**
+
+![Kubernetes Services](./screenshots/kubernetes_services.png)
+
+### Kubernetes Deployments
+
+You can check the status of **Kubernetes deployments**, which shows the pods deployed in the cluster.
+
+**Example Output:**
+
+![Kubernetes Deployments](./screenshots/kubernetes_deployments.png)
+
+### Kubernetes HPA (Horizontal Pod Autoscaling)
+
+The **Kubernetes Horizontal Pod Autoscaler (HPA)** will show the scaling behavior of your deployed services based on CPU or memory usage.
+
+**Example Output:**
+
+![Kubernetes HPA](./screenshots/kubernetes_hpa.png)
+
+### Deployment and Test Results
+
+Once the tests are executed, you can check the **deployment and test results**. This section will include the final results of the tests that were run in your Selenium Python setup.
+
+**Example Output:**
+
+![Deployment and Test Results](./screenshots/deployment_test_results.png)
+
