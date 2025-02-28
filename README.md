@@ -155,6 +155,14 @@ You can check the status of **Kubernetes deployments**, which shows the pods dep
 
 ![Kubernetes Deployments](./screenshots/kubernetes_deployments.png)
 
+### Kubernetes Pods
+
+The **Kubernetes Pods** section will show the pods running inside your cluster, their statuses, and other details.
+
+**Example Output:**
+
+![Kubernetes Pods](./screenshots/kubernetes_pods.png)
+
 ### Kubernetes HPA (Horizontal Pod Autoscaling)
 
 The **Kubernetes Horizontal Pod Autoscaler (HPA)** will show the scaling behavior of your deployed services based on CPU or memory usage.
@@ -163,11 +171,24 @@ The **Kubernetes Horizontal Pod Autoscaler (HPA)** will show the scaling behavio
 
 ![Kubernetes HPA](./screenshots/kubernetes_hpa.png)
 
-### Deployment and Test Results
+### Deployment Results
 
-Once the tests are executed, you can check the **deployment and test results**. This section will include the final results of the tests that were run in your Selenium Python setup.
+Once the tests are executed, you can check the **deployment results**. This section will include the final results of the deployments that were run in your Selenium Python script.
 
 **Example Output:**
 
-![Deployment and Test Results](./screenshots/deployment_test_results.png)
+![Deployment and Test Results](./screenshots/deployment_test_results_1.png)
+![Deployment and Test Results](./screenshots/deployment_test_results_2.png)
+![Deployment and Test Results](./screenshots/deployment_test_results_3.png)
+
+### Test Results
+
+Once the deployments are executed, you can check the **Test results**. This section will include the final results of the tests that were run in your Selenium Python tests.
+
+**Example Output:**
+
+![Deployment and Test Results](./screenshots/deployment_test_results_4.png)
+![Deployment and Test Results](./screenshots/deployment_test_results_5.png)
+![Deployment and Test Results](./screenshots/deployment_test_results_6.png)
+
 
