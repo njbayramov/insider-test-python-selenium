@@ -8,7 +8,25 @@ This project is focused on creating a **Kubernetes infrastructure on AWS** and r
 - AWS account
 - Python (for running Selenium tests)
 - Docker installed
-- Basic knowledge of Kubernetes and AWS services
+
+### How It Works
+
+The `scripts/deploy_and_test.py` Python script automates the process of creating the **EKS infrastructure** and deploying the necessary Kubernetes resources.
+
+1. **EKS Infrastructure Setup**: 
+   The script first sets up the **EKS cluster** on AWS. It deploys the Kubernetes **services**, **pods**, and **Horizontal Pod Autoscaler (HPA)** as part of the infrastructure.
+
+2. **Test Deployment**:
+   - The script then copies the **tests directory** to the **Test Controller** pod.
+   - It uses `pytest` to execute the Selenium Python tests inside the **Test Controller** pod.
+
+3. **Test Execution**:
+   - The **Test Controller** pod interacts with the **Chrome-node** pod via the **Selenium Hub** to run the tests in a browser environment.
+
+   - **Selenium Hub**: Acts as a central hub for managing and executing browser tests in the **Chrome-node** pod.
+   - The **Chrome-node** pod hosts the actual browser instance for running the Selenium tests.
+
+The combination of these components enables the automated running of browser tests in a Kubernetes environment, using AWS EKS and Selenium with Python.
 
 ## Project Setup
 
